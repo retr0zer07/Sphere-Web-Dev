@@ -88,30 +88,30 @@ El agente debe ejecutar mentalmente y declarar el resultado en la descripción d
 
 ```yaml
 empresa:
-  nombre: ""
-  direccion: ""
-  registro_url: ""
-  ano_inicio: ""
+  nombre: "Sphere Dev Web"
+  direccion: "no"
+  registro_url: "no"
+  ano_inicio: "2026"
 
 contacto:
-  telefono: ""
-  email: ""
-  canales_preferidos: []   # ej: [whatsapp, email]
+  telefono: "+53 58706242"
+  email: "retr0zer0.zer0@gmail.com"
+  canales_preferidos: [whatsapp]   # ej: [whatsapp, email]
 
 operacion:
-  dias: ""                  # ej: "Lunes a Sábado"
-  horario: ""               # ej: "9am - 6pm"
-  dias_especiales: ""
-  metodos_pago: []          # ej: [tarjetas, zelle, efectivo]
-  ofrece_descuentos: false
+  dias: "Lunes a Sabados"                  # ej: "Lunes a Sábado"
+  horario: "8am - 8pm"               # ej: "9am - 6pm"
+  dias_especiales: "no"
+  metodos_pago: [tarjetas, zelle]          # ej: [tarjetas, zelle, efectivo]
+  ofrece_descuentos: true
   tiene_sucursales: false
 
 negocio:
-  servicios: []             # ej: ["Servicio de limpieza residencial"]
-  publico_objetivo: ""      # ej: "Hidalgo County, Texas"
+  servicios: [servicio de creacion de paginas web de elite]             # ej: ["Servicio de limpieza residencial"]
+  publico_objetivo: "estados unidos"      # ej: "Hidalgo County, Texas"
 
 marketing:
-  canales_principales: []   # ej: [facebook, instagram]
+  canales_principales: [instagram]   # ej: [facebook, instagram]
   campanas_pagas: false
   resenas_google: false
   responde_resenas: false
@@ -121,8 +121,8 @@ web:
   gestion_reservas: ""      # plataforma o método
   tipo_agenda: ""
   experiencia_deseada: ""   # ej: "cotizar y agendar"
-  comentarios: ""
-  consentimiento_sms: false
+  comentarios: "ofresco todo tipo de servicios en el mundo de creacion de paginas web de todo tipo..."
+  consentimiento_sms: true
 ```
 
 ---
