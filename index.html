@@ -30,18 +30,27 @@
       --text-3xl: 2.441rem;
       --text-4xl: 3.052rem;
       --text-5xl: 3.815rem;
-      --color-brand-500: hsl(230, 70%, 40%);
-      --color-brand-600: hsl(230, 70%, 32%);
-      --color-brand-700: hsl(230, 70%, 24%);
-      --color-accent-500: hsl(38, 95%, 52%);
-      --color-accent-600: hsl(38, 90%, 44%);
-      --color-bg: hsl(40, 15%, 98%);
-      --color-surface: hsl(40, 10%, 96%);
-      --color-text: hsl(230, 20%, 10%);
-      --color-text-muted: hsl(230, 10%, 45%);
-      --color-border: hsl(230, 10%, 88%);
-      --color-cta: var(--color-accent-500);
-      --color-cta-text: hsl(230, 20%, 10%);
+      --color-white: hsl(0, 0%, 100%);
+      --color-brand-500: hsl(225, 82%, 60%);
+      --color-brand-600: hsl(257, 69%, 52%);
+      --color-brand-700: hsl(252, 27%, 32%);
+      --color-brand-500-hover: hsl(225, 72%, 55%);
+      --color-brand-600-hover: hsl(257, 65%, 47%);
+      --color-accent-500: hsl(257, 80%, 64%);
+      --color-accent-600: hsl(257, 70%, 56%);
+      --color-bg: hsl(246, 52%, 98%);
+      --color-surface: hsl(248, 50%, 99%);
+      --color-text: hsl(252, 31%, 18%);
+      --color-text-muted: hsl(249, 16%, 42%);
+      --color-border: hsl(247, 32%, 86%);
+      --color-header-bg: hsla(246, 52%, 98%, 0.92);
+      --color-input-bg: hsl(246, 50%, 97%);
+      --color-input-border: hsl(247, 34%, 78%);
+      --color-cta-bg: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
+      --color-cta-hover-bg: linear-gradient(135deg, var(--color-brand-600-hover), var(--color-brand-500-hover));
+      --gradient-brand-text: linear-gradient(120deg, var(--color-brand-700), var(--color-brand-600) 45%, var(--color-brand-500));
+      --gradient-surface-subtle: linear-gradient(160deg, var(--color-white), hsl(246, 65%, 99%));
+      --color-cta-text: var(--color-white);
       --space-1: 0.25rem;
       --space-2: 0.5rem;
       --space-3: 0.75rem;
@@ -83,7 +92,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: hsla(40, 15%, 98%, 0.95);
+      background: var(--color-header-bg);
       border-bottom: 1px solid var(--color-border);
       backdrop-filter: blur(8px);
     }
@@ -100,15 +109,32 @@
     .wordmark {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2);
+      gap: var(--space-3);
       text-decoration: none;
       color: var(--color-brand-700);
-      font-family: var(--font-display);
-      font-size: var(--text-2xl);
+      font-size: var(--text-base);
       font-weight: 700;
     }
 
-    .wordmark img { width: 28px; }
+    .wordmark img {
+      width: 38px;
+      filter: drop-shadow(0 6px 14px hsla(252, 45%, 30%, 0.24));
+    }
+
+    .wordmark-text {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-brand-500);
+      background: var(--gradient-brand-text);
+    }
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      .wordmark-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    }
 
     .nav-links {
       display: flex;
@@ -121,6 +147,14 @@
       color: var(--color-text-muted);
       font-weight: 500;
     }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color var(--duration-fast) ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--color-brand-600); }
 
     .btn {
       display: inline-flex;
@@ -136,12 +170,16 @@
     }
 
     .btn-primary {
-      background: var(--color-cta);
+      background: var(--color-cta-bg);
       color: var(--color-cta-text);
+      box-shadow: 0 10px 20px hsla(252, 52%, 35%, 0.24);
     }
 
     .btn-primary:hover,
-    .btn-primary:focus-visible { background: var(--color-accent-600); transform: translateY(-1px); }
+    .btn-primary:focus-visible {
+      background: var(--color-cta-hover-bg);
+      transform: translateY(-1px);
+    }
 
     .hero {
       padding: var(--space-16) 0 var(--space-12);
@@ -152,7 +190,11 @@
 
     .hero-grid { display: grid; gap: var(--space-8); }
 
-    .hero h1 { font-size: clamp(2rem, 5vw, var(--text-5xl)); color: var(--color-brand-700); }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, var(--text-5xl));
+      color: var(--color-brand-700);
+      text-wrap: balance;
+    }
     .hero p { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 62ch; }
 
     .hero-meta {
@@ -165,24 +207,22 @@
     }
 
     .hero-card {
-      background: linear-gradient(145deg, hsl(230, 70%, 96%), hsl(40, 30%, 95%));
+      background: linear-gradient(145deg, hsl(254, 86%, 98%), hsl(225, 100%, 97%));
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
+      border-radius: 24px;
       padding: var(--space-8);
-      min-height: 250px;
+      min-height: 280px;
       display: grid;
       place-items: center;
+      box-shadow: 0 20px 50px hsla(252, 36%, 28%, 0.12);
     }
 
     .hero-art {
       width: min(100%, 360px);
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 30% 20%, hsl(38, 95%, 62%), transparent 50%),
-        radial-gradient(circle at 70% 75%, hsl(230, 70%, 45%), transparent 45%),
-        hsl(230, 60%, 18%);
-      box-shadow: 0 20px 40px hsla(230, 40%, 20%, 0.2);
+      border-radius: 24px;
+      background: linear-gradient(170deg, hsla(257, 76%, 94%, 0.9), hsla(225, 82%, 93%, 0.95));
+      padding: var(--space-4);
+      box-shadow: inset 0 0 0 1px hsla(252, 32%, 82%, 0.6);
     }
 
     .js .reveal { opacity: 0; transform: translateY(10px); transition: opacity .4s var(--ease-out-spring), transform .4s var(--ease-out-spring); }
@@ -248,7 +288,8 @@
   <header class="site-header">
     <nav class="container nav-wrap" aria-label="Primary">
       <a class="wordmark" href="#top" aria-label="Sphere Dev Web home">
-        <img src="assets/icons/wordmark-sphere.svg" alt="Sphere wordmark">
+        <img src="logo.svg" alt="" role="presentation">
+        <span class="wordmark-text">Sphere Dev Web</span>
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
@@ -273,7 +314,7 @@
           </p>
         </div>
         <div class="hero-card" aria-hidden="true">
-          <div class="hero-art"></div>
+          <img class="hero-art" src="logo.svg" alt="">
         </div>
       </div>
     </section>
