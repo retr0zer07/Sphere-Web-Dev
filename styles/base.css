@@ -1,0 +1,20 @@
+main { overflow: clip; }
+.section { padding: var(--space-12) 0; }
+.section h2 { color: var(--color-brand-700); font-size: clamp(1.8rem, 3vw, var(--text-4xl)); }
+.section-lead { max-width: 68ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+.bullet-list { margin: 0 0 var(--space-4); padding-left: 1.25rem; color: var(--color-text-muted); }
+.bullet-list li { margin-bottom: var(--space-2); }
+.site-footer { border-top: 1px solid var(--color-border); padding: var(--space-12) 0 var(--space-6); background: var(--color-surface); }
+.footer-title { font-weight: 700; margin-bottom: var(--space-2); }
+.copyright { color: var(--color-text-muted); margin-top: var(--space-8); font-size: var(--text-sm); }
+.js .reveal { opacity: 0; transform: translateY(10px); transition: opacity .4s var(--ease-out-spring), transform .4s var(--ease-out-spring); }
+.js .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .reveal,
+  .js .reveal.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

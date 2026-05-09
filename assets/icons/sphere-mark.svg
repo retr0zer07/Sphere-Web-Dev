@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Sphere symbol">
+  <circle cx="32" cy="32" r="30" fill="#1f2fae"/>
+  <path d="M12 34c7-9 15-14 24-14s17 5 24 14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M12 30c7 9 15 14 24 14s17-5 24-14" stroke="#f8b829" stroke-width="4" stroke-linecap="round"/>
+</svg>

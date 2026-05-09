@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="Sphere wordmark">
+  <rect width="320" height="80" rx="12" fill="#f8f7f3"/>
+  <circle cx="40" cy="40" r="22" fill="#1f2fae"/>
+  <text x="76" y="51" font-size="38" font-family="Fraunces, Georgia, serif" fill="#141a2e">Sphere</text>
+</svg>

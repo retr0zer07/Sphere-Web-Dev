@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sphere Dev Web — Elite Website Design for U.S. Businesses</title>
+  <meta name="description" content="We build high-performance, conversion-focused websites for businesses across the United States. Landing pages, e-commerce, full business sites. Get a free quote today.">
+  <link rel="canonical" href="https://spheredevweb.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spheredevweb.com/">
+  <meta property="og:title" content="Sphere Dev Web — Elite Website Design for U.S. Businesses">
+  <meta property="og:description" content="High-performance websites built from scratch for U.S. businesses. Landing pages, e-commerce, redesigns. Fast delivery, clean code.">
+  <meta property="og:image" content="https://spheredevweb.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --text-xs: 0.64rem;
+      --text-sm: 0.8rem;
+      --text-base: 1rem;
+      --text-lg: 1.25rem;
+      --text-xl: 1.563rem;
+      --text-2xl: 1.953rem;
+      --text-3xl: 2.441rem;
+      --text-4xl: 3.052rem;
+      --text-5xl: 3.815rem;
+      --color-brand-500: hsl(230, 70%, 40%);
+      --color-brand-600: hsl(230, 70%, 32%);
+      --color-brand-700: hsl(230, 70%, 24%);
+      --color-accent-500: hsl(38, 95%, 52%);
+      --color-accent-600: hsl(38, 90%, 44%);
+      --color-bg: hsl(40, 15%, 98%);
+      --color-surface: hsl(40, 10%, 96%);
+      --color-text: hsl(230, 20%, 10%);
+      --color-text-muted: hsl(230, 10%, 45%);
+      --color-border: hsl(230, 10%, 88%);
+      --color-cta: var(--color-accent-500);
+      --color-cta-text: hsl(230, 20%, 10%);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-24: 6rem;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --ease-out-spring: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration-fast: 200ms;
+      --duration-base: 350ms;
+      --duration-slow: 500ms;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+      text-rendering: optimizeLegibility;
+    }
+
+    img, svg { max-width: 100%; height: auto; }
+
+    .container { width: min(100% - 2rem, 1200px); margin-inline: auto; }
+
+    a { color: inherit; }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0 0 var(--space-4); }
+    p { margin: 0 0 var(--space-4); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: hsla(40, 15%, 98%, 0.95);
+      border-bottom: 1px solid var(--color-border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
+      flex-wrap: wrap;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      text-decoration: none;
+      color: var(--color-brand-700);
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+    }
+
+    .wordmark img { width: 28px; }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-4);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      border: 1px solid transparent;
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+    }
+
+    .btn-primary {
+      background: var(--color-cta);
+      color: var(--color-cta-text);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible { background: var(--color-accent-600); transform: translateY(-1px); }
+
+    .hero {
+      padding: var(--space-16) 0 var(--space-12);
+      display: grid;
+      gap: var(--space-8);
+      align-items: center;
+    }
+
+    .hero-grid { display: grid; gap: var(--space-8); }
+
+    .hero h1 { font-size: clamp(2rem, 5vw, var(--text-5xl)); color: var(--color-brand-700); }
+    .hero p { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 62ch; }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, hsl(230, 70%, 96%), hsl(40, 30%, 95%));
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      min-height: 250px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-art {
+      width: min(100%, 360px);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 20%, hsl(38, 95%, 62%), transparent 50%),
+        radial-gradient(circle at 70% 75%, hsl(230, 70%, 45%), transparent 45%),
+        hsl(230, 60%, 18%);
+      box-shadow: 0 20px 40px hsla(230, 40%, 20%, 0.2);
+    }
+
+    .js .reveal { opacity: 0; transform: translateY(10px); transition: opacity .4s var(--ease-out-spring), transform .4s var(--ease-out-spring); }
+    .js .reveal.visible { opacity: 1; transform: none; }
+
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.2fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrap { justify-content: center; }
+      .nav-links { justify-content: center; }
+      .hero { padding-top: var(--space-12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal,
+      .reveal,
+      .js .reveal.visible {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+  <link rel="preload" href="styles/tokens.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+  </noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Sphere Dev Web",
+    "description": "Elite website design and development for U.S. businesses",
+    "url": "https://spheredevweb.com",
+    "telephone": "+53-587-06242",
+    "email": "retr0zer0.zer0@gmail.com",
+    "openingHours": "Mo-Sa 08:00-20:00",
+    "foundingDate": "2026",
+    "serviceArea": { "@type": "Country", "name": "United States" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Website" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Development" } }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+  <header class="site-header">
+    <nav class="container nav-wrap" aria-label="Primary">
+      <a class="wordmark" href="#top" aria-label="Sphere Dev Web home">
+        <img src="assets/icons/wordmark-sphere.svg" alt="Sphere wordmark">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="nav_cta_click" data-utm-pass="true">Get a Free Quote</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero reveal section-track" data-section="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Elite Websites That Convert Visitors Into Clients</h1>
+          <p>We build high-performance, beautifully crafted websites for businesses across the United States. From landing pages to full e-commerce — delivered fast, built to last.</p>
+          <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="cta_hero_click" data-utm-pass="true">Get a Free Quote</a>
+          <p class="hero-meta" aria-label="Hero trust markers">
+            <span>No commitment · Reply within 24 hours</span>
+            <span>50+ projects delivered · Est. 2026</span>
+          </p>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-art"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="problem" data-section="problem">
+      <div class="container">
+        <h2>Your website is losing you business</h2>
+        <ul class="bullet-list">
+          <li>Slow load times that drive visitors away</li>
+          <li>Outdated design that kills trust in seconds</li>
+          <li>No mobile optimization — 60% of your traffic gone</li>
+          <li>Generic templates that look like everyone else</li>
+        </ul>
+        <p class="section-lead">You deserve a website that works as hard as you do.</p>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="solution" data-section="solution">
+      <div class="container">
+        <h2>Websites engineered for results</h2>
+        <p class="section-lead">Sphere builds every site from scratch — no templates, no shortcuts. We combine conversion-focused design with clean code to give your business the online presence it deserves.</p>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="services" data-section="services">
+      <div class="container">
+        <h2>Services built for growth</h2>
+        <div class="grid cards-3">
+          <article class="card"><h3>Landing Pages</h3><p>Turn traffic into leads with pages built to convert</p></article>
+          <article class="card"><h3>Business Websites</h3><p>Professional multi-page sites that establish credibility</p></article>
+          <article class="card"><h3>E-commerce</h3><p>Sell online with a store that's fast, beautiful and easy to manage</p></article>
+          <article class="card"><h3>Portfolio Sites</h3><p>Showcase your work with a site as impressive as your craft</p></article>
+          <article class="card"><h3>Web Redesign</h3><p>Transform your outdated site into a competitive advantage</p></article>
+          <article class="card"><h3>Maintenance &amp; Support</h3><p>Keep your site fast, secure and up to date — we handle it</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="process" data-section="process">
+      <div class="container">
+        <h2>Our process</h2>
+        <div class="grid cards-4 process-grid">
+          <article class="card"><h3>Discovery</h3><p>We learn your business, goals and audience</p></article>
+          <article class="card"><h3>Design</h3><p>We craft a visual direction aligned with your brand</p></article>
+          <article class="card"><h3>Build</h3><p>We code every pixel with performance and accessibility in mind</p></article>
+          <article class="card"><h3>Launch</h3><p>We deploy, test and hand you the keys</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="testimonials" data-section="testimonials">
+      <div class="container">
+        <h2>What clients say</h2>
+        <div class="grid cards-3">
+          <blockquote class="card"><p>“Sphere delivered our landing page in 5 days. Leads went up 40% the first month.”</p><cite>— James R., Marketing Director, Austin TX</cite></blockquote>
+          <blockquote class="card"><p>“Finally a web team that actually understands conversion. Our bounce rate dropped by half.”</p><cite>— Sarah M., E-commerce Owner, Miami FL</cite></blockquote>
+          <blockquote class="card"><p>“Professional, fast, and the result was beyond what I expected. Worth every penny.”</p><cite>— Daniel K., Consultant, New York NY</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="pricing" data-section="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="grid cards-3 pricing-grid">
+          <article class="card pricing-card">
+            <h3>Starter</h3>
+            <p class="price">$499</p>
+            <ul>
+              <li>Landing page</li>
+              <li>Mobile-first</li>
+              <li>SEO basics</li>
+              <li>2 revisions</li>
+              <li>5-day delivery</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="cta_pricing_click" data-plan="starter" data-utm-pass="true">Get a Quote</a>
+          </article>
+          <article class="card pricing-card pricing-card--featured">
+            <span class="badge">Recommended</span>
+            <h3>Growth</h3>
+            <p class="price">$999</p>
+            <ul>
+              <li>Up to 5 pages</li>
+              <li>Custom design</li>
+              <li>Contact form</li>
+              <li>Google Analytics</li>
+              <li>3 revisions</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="cta_pricing_click" data-plan="growth" data-utm-pass="true">Get a Quote</a>
+          </article>
+          <article class="card pricing-card">
+            <h3>Elite</h3>
+            <p class="price">Custom</p>
+            <ul>
+              <li>Full scope e-commerce / CMS</li>
+              <li>Advanced SEO</li>
+              <li>Priority support</li>
+              <li>Unlimited revisions</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="cta_pricing_click" data-plan="elite" data-utm-pass="true">Get a Quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="faq" data-section="faq">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details><summary>How long does it take?</summary><p>5–14 business days depending on scope.</p></details>
+          <details><summary>What tech do you use?</summary><p>HTML, CSS, JavaScript — or the platform that best fits your needs.</p></details>
+          <details><summary>How many revisions are included?</summary><p>2 revisions on Starter, 3 on Growth, unlimited on Elite.</p></details>
+          <details><summary>How do I pay?</summary><p>Credit/debit cards or Zelle. 50% upfront, 50% on delivery.</p></details>
+          <details><summary>Do you offer maintenance?</summary><p>Yes — monthly maintenance plans available from $79/month.</p></details>
+          <details><summary>Will my site work on mobile?</summary><p>Every site we build is mobile-first and tested on all screen sizes.</p></details>
+          <details><summary>Do I need hosting and a domain?</summary><p>We can guide you or set it up for you — just ask.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="quote" data-section="quote">
+      <div class="container final-cta">
+        <h2>Ready to get a website that actually works?</h2>
+        <p>No commitment · We reply within 24 hours · Mon–Sat, 8am–8pm</p>
+        <a class="btn btn-primary" href="https://wa.me/5358706242" target="_blank" rel="noopener" data-event="cta_final_click" data-utm-pass="true">Get a Free Quote</a>
+      </div>
+    </section>
+
+    <section class="section reveal section-track" id="contact" data-section="contact">
+      <div class="container">
+        <h2>Request your quote</h2>
+        <form id="quote-form">
+          <div class="grid form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="landing">Landing Pages</option>
+                <option value="business">Business Websites</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="portfolio">Portfolio Sites</option>
+                <option value="redesign">Web Redesign</option>
+                <option value="maintenance">Maintenance &amp; Support</option>
+              </select>
+            </div>
+            <div class="field field-full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Quote Request</button>
+          <p id="form-status" role="alert" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-track" data-section="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">Sphere Dev Web</p>
+        <p>Elite website creation services for businesses in the United States.</p>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <p><a href="tel:+5358706242">+53 58706242</a></p>
+        <p><a href="mailto:retr0zer0.zer0@gmail.com">retr0zer0.zer0@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Hours &amp; Payments</p>
+        <p>Mon–Sat · 8am – 8pm</p>
+        <p>Cards · Zelle</p>
+        <p><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <p class="container copyright">© <span id="year">2026</span> Sphere Dev Web. All rights reserved.</p>
+  </footer>
+
+  <script defer src="scripts/analytics.js"></script>
+  <script defer src="scripts/main.js"></script>
+</body>
+</html>
