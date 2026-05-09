@@ -115,10 +115,16 @@
     .wordmark-text {
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: #4A6AEC;
       background: linear-gradient(120deg, #403A67, #6931DA 45%, #4A6AEC);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    }
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      .wordmark-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
     }
 
     .nav-links {
