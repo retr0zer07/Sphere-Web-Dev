@@ -1,0 +1,14 @@
+.grid { display: grid; gap: var(--space-4); }
+.cards-3 { grid-template-columns: 1fr; }
+.cards-4 { grid-template-columns: 1fr; }
+.form-grid { grid-template-columns: 1fr; }
+.footer-grid { display: grid; gap: var(--space-6); }
+@media (min-width: 680px) {
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .field-full { grid-column: 1 / -1; }
+}
+@media (min-width: 860px) {
+  .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

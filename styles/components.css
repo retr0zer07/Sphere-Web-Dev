@@ -1,0 +1,55 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 8px 24px hsla(230, 30%, 20%, 0.06);
+}
+.card h3 { font-size: var(--text-xl); color: var(--color-brand-700); }
+.card p, .card li, details p, .site-footer p { color: var(--color-text-muted); }
+.card ul { margin: 0; padding-left: 1rem; }
+.card blockquote, blockquote { margin: 0; }
+.price { font-size: var(--text-2xl); color: var(--color-brand-600); font-family: var(--font-display); }
+.pricing-card--featured { border-color: var(--color-accent-500); position: relative; }
+.badge {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  background: var(--color-accent-500);
+  color: var(--color-cta-text);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.faq-list { display: grid; gap: var(--space-3); }
+details {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+summary { cursor: pointer; font-weight: 700; color: var(--color-brand-700); }
+.field { display: grid; gap: var(--space-2); }
+label { font-weight: 500; }
+input, select, textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: var(--color-text);
+  background: #fff;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+#form-status { margin-top: var(--space-4); font-weight: 500; }
+.final-cta {
+  text-align: center;
+  background: linear-gradient(160deg, hsl(230, 70%, 95%), hsl(40, 50%, 95%));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-12) var(--space-6);
+}
+.final-cta p { color: var(--color-text-muted); }
