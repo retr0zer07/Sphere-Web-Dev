@@ -21,7 +21,10 @@
   --color-text: hsl(252, 31%, 18%);
   --color-text-muted: hsl(249, 16%, 42%);
   --color-border: hsl(247, 32%, 86%);
-  --color-cta: linear-gradient(135deg, #6931DA, #4A6AEC);
+  --color-input-bg: hsl(246, 50%, 97%);
+  --color-input-border: hsl(247, 34%, 78%);
+  --color-cta-bg: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
+  --color-cta-hover-bg: linear-gradient(135deg, hsl(257, 65%, 47%), hsl(225, 72%, 55%));
   --color-cta-text: hsl(0, 0%, 100%);
   --space-1: 0.25rem;
   --space-2: 0.5rem;
