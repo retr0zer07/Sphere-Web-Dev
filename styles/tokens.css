@@ -14,6 +14,8 @@
   --color-brand-500: hsl(225, 82%, 60%);
   --color-brand-600: hsl(257, 69%, 52%);
   --color-brand-700: hsl(252, 27%, 32%);
+  --color-brand-500-hover: hsl(225, 72%, 55%);
+  --color-brand-600-hover: hsl(257, 65%, 47%);
   --color-accent-500: hsl(257, 80%, 64%);
   --color-accent-600: hsl(257, 70%, 56%);
   --color-bg: hsl(246, 52%, 98%);
@@ -25,7 +27,7 @@
   --color-input-bg: hsl(246, 50%, 97%);
   --color-input-border: hsl(247, 34%, 78%);
   --color-cta-bg: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
-  --color-cta-hover-bg: linear-gradient(135deg, hsl(257, 65%, 47%), hsl(225, 72%, 55%));
+  --color-cta-hover-bg: linear-gradient(135deg, var(--color-brand-600-hover), var(--color-brand-500-hover));
   --gradient-brand-text: linear-gradient(120deg, var(--color-brand-700), var(--color-brand-600) 45%, var(--color-brand-500));
   --gradient-surface-subtle: linear-gradient(160deg, #ffffff, hsl(246, 65%, 99%));
   --color-cta-text: hsl(0, 0%, 100%);
