@@ -11,4 +11,4 @@ Landing page for Sphere Dev Web (single-page marketing site).
 
 ## Local preview
 
-Open `/home/runner/work/Sphere-Web-Dev/Sphere-Web-Dev/index.html` directly in the browser (`file://`) or serve with any static server.
+Open `index.html` directly in the browser (`file://`) or serve with any static server.
