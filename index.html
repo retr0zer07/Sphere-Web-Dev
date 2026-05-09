@@ -30,6 +30,7 @@
       --text-3xl: 2.441rem;
       --text-4xl: 3.052rem;
       --text-5xl: 3.815rem;
+      --color-white: hsl(0, 0%, 100%);
       --color-brand-500: hsl(225, 82%, 60%);
       --color-brand-600: hsl(257, 69%, 52%);
       --color-brand-700: hsl(252, 27%, 32%);
@@ -48,8 +49,8 @@
       --color-cta-bg: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
       --color-cta-hover-bg: linear-gradient(135deg, var(--color-brand-600-hover), var(--color-brand-500-hover));
       --gradient-brand-text: linear-gradient(120deg, var(--color-brand-700), var(--color-brand-600) 45%, var(--color-brand-500));
-      --gradient-surface-subtle: linear-gradient(160deg, #ffffff, hsl(246, 65%, 99%));
-      --color-cta-text: hsl(0, 0%, 100%);
+      --gradient-surface-subtle: linear-gradient(160deg, var(--color-white), hsl(246, 65%, 99%));
+      --color-cta-text: var(--color-white);
       --space-1: 0.25rem;
       --space-2: 0.5rem;
       --space-3: 0.75rem;
@@ -287,7 +288,7 @@
   <header class="site-header">
     <nav class="container nav-wrap" aria-label="Primary">
       <a class="wordmark" href="#top" aria-label="Sphere Dev Web home">
-        <img src="logo.svg" alt="">
+        <img src="logo.svg" alt="" role="presentation">
         <span class="wordmark-text">Sphere Dev Web</span>
       </a>
       <ul class="nav-links">
