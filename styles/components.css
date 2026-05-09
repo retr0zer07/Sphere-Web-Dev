@@ -1,5 +1,5 @@
 .card {
-  background: linear-gradient(160deg, #ffffff, hsl(246, 65%, 99%));
+  background: var(--gradient-surface-subtle);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -14,7 +14,7 @@
 .badge {
   display: inline-block;
   margin-bottom: var(--space-2);
-  background: linear-gradient(135deg, #6931DA, #4A6AEC);
+  background: var(--color-cta-bg);
   color: var(--color-cta-text);
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-sm);
@@ -23,7 +23,7 @@
 }
 .faq-list { display: grid; gap: var(--space-3); }
 details {
-  background: linear-gradient(160deg, #ffffff, hsl(246, 65%, 99%));
+  background: var(--gradient-surface-subtle);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-4);
